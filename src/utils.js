@@ -10,14 +10,14 @@ export const fetchDogs = () =>
     return response.json();
   });
 
-export const fetchCatById = (catId) =>
+export const fetchCatDetails = (catId) =>
   fetch(`http://localhost:3000/cats/${catId}`)
   .then(response => {
     return response.json();
   });
 
-export const fetchDogById = (datId) =>
-  fetch(`http://localhost:3000/dogs/${datId}`)
+export const fetchDogDetails = (dogId) =>
+  fetch(`http://localhost:3000/dogs/${dogId}`)
   .then(response => {
     return response.json();
   });
