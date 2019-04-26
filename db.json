@@ -14,6 +14,16 @@
       "id": 3,
       "name": "mijo",
       "description": "some description 3"
+    },
+    {
+      "name": "branko",
+      "description": "blyat",
+      "id": 4
+    },
+    {
+      "name": "alessija",
+      "description": "Nije macka al je macka",
+      "id": 5
     }
   ],
   "dogs": [

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {fetchCats} from './../utils';
-import CatsDisplay from './CatsDisplay';
+import {Link} from 'react-router-dom';
+import {fetchCats} from './../../utils';
+import CatsList from './CatsList';
 
-class Cats extends Component{
+class CatsDisplay extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -19,11 +20,14 @@ class Cats extends Component{
   render(){
     return(
       <div>
+        <div>
         <h1>Cats</h1>
-        <CatsDisplay cats={this.state.cats}/>
+        <Link to="/cats/create"><button>Add new</button></Link>
+        </div>
+        <CatsList cats={this.state.cats}/>
       </div>
     )
   }
 }
 
-export default Cats;
+export default CatsDisplay;
