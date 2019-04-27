@@ -1,46 +1,26 @@
 {
   "cats": [
     {
-      "id": 1,
-      "name": "pjero",
-      "description": "some description"
-    },
-    {
-      "id": 2,
-      "name": "stipe",
-      "description": "some description 2"
-    },
-    {
-      "id": 3,
-      "name": "mijo",
-      "description": "some description 3"
-    },
-    {
-      "name": "branko",
-      "description": "blyat",
-      "id": 4
-    },
-    {
-      "name": "alessija",
-      "description": "Nije macka al je macka",
-      "id": 5
+      "name": "BUMBULO",
+      "description": "ATATURK",
+      "id": 6
     }
   ],
   "dogs": [
     {
-      "id": 1,
-      "name": "doggo",
-      "description": "some description"
-    },
-    {
-      "id": 2,
-      "name": "boi",
-      "description": "some description 2"
+      "name": "bigboi",
+      "description": "some description 2",
+      "id": 2
     },
     {
       "id": 3,
       "name": "gud boi",
       "description": "some description 3"
+    },
+    {
+      "name": "bad boi",
+      "description": "kek",
+      "id": 4
     }
   ]
 }

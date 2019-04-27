@@ -2,13 +2,13 @@ import React from "react";
 import withLoader from "./../withLoader";
 import { Link } from "react-router-dom";
 
-const CatsList = ({ cats }) => {
+const DogsList = ({ dogs }) => {
   return (
     <ul>
-      {cats.map(cat => (
-        <li key={cat.id}>
+      {dogs.map(dog => (
+        <li key={dog.id}>
           <h2>
-            <Link to={`/cats/${cat.id}`}>{cat.name}</Link>
+            <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>
           </h2>
         </li>
       ))}
@@ -16,4 +16,4 @@ const CatsList = ({ cats }) => {
   );
 };
 
-export default withLoader("cats")(CatsList);
+export default withLoader("dogs")(DogsList);

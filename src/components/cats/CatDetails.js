@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fetchCatDetails } from "./../../utils";
+import { fetchCatDetails, deleteCat } from "./../../utils";
 import { Link } from "react-router-dom";
 
 class CatDetails extends Component {
@@ -17,6 +17,12 @@ class CatDetails extends Component {
     });
   }
 
+  handleDelete = () => {
+    deleteCat(this.state.cat).then(() => {
+      this.props.history.push("/cats");
+    });
+  };
+
   render() {
     if (!this.state.cat) return null;
     return (
@@ -26,6 +32,7 @@ class CatDetails extends Component {
         <Link to={`/cats/update/${this.state.cat.id}`}>
           <button>Edit</button>
         </Link>
+        <button onClick={this.handleDelete}>Delete</button>
       </>
     );
   }

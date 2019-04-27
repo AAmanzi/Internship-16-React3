@@ -1,26 +1,26 @@
 import React, { Component } from "react";
-import CatForm from "./CatForm";
-import { updateCat, fetchCatDetails } from "./../../utils";
+import DogForm from "./DogForm";
+import { updateDog, fetchDogDetails } from "./../../utils";
 
-class CatUpdate extends Component {
+class DogUpdate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cat: null
+      dog: null
     };
   }
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    fetchCatDetails(id).then(response => {
-      this.setState({ cat: response });
+    fetchDogDetails(id).then(response => {
+      this.setState({ dog: response });
     });
   }
 
   handleNameChange = event => {
     this.setState({
-      cat: {
-        ...this.state.cat,
+      dog: {
+        ...this.state.dog,
         name: event.target.value
       }
     });
@@ -28,25 +28,25 @@ class CatUpdate extends Component {
 
   handleDescriptionChange = event => {
     this.setState({
-      cat: {
-        ...this.state.cat,
+      dog: {
+        ...this.state.dog,
         description: event.target.value
       }
     });
   };
 
   handleSubmit = () => {
-    updateCat(this.state.cat).then(response => {
-      this.props.history.push(`/cats/${response.id}`);
+    updateDog(this.state.dog).then(response => {
+      this.props.history.push(`/dogs/${response.id}`);
     });
   };
 
   render() {
     return (
       <>
-        <h1>Edit cat</h1>
-        <CatForm
-          cat={this.state.cat}
+        <h1>Edit dog</h1>
+        <DogForm
+          dog={this.state.dog}
           onChangeName={this.handleNameChange}
           onChangeDescription={this.handleDescriptionChange}
           onSubmit={this.handleSubmit}
@@ -56,4 +56,4 @@ class CatUpdate extends Component {
   }
 }
 
-export default CatUpdate;
+export default DogUpdate;

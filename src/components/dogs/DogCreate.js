@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import CatForm from "./CatForm";
-import { createCat } from "./../../utils";
+import DogForm from "./DogForm";
+import { createDog } from "./../../utils";
 
-class CatCreate extends Component {
+class DogCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cat: {
+      dog: {
         name: "",
         description: ""
       }
@@ -15,28 +15,28 @@ class CatCreate extends Component {
 
   handleNameChange = event => {
     this.setState({
-      cat: { ...this.state.cat, name: event.target.value }
+      dog: { ...this.state.dog, name: event.target.value }
     });
   };
 
   handleDescriptionChange = event => {
     this.setState({
-      cat: { ...this.state.cat, description: event.target.value }
+      dog: { ...this.state.dog, description: event.target.value }
     });
   };
 
   handleSubmit = () => {
-    createCat(this.state.cat).then(response => {
-      this.props.history.push(`/cats/${response.id}`);
+    createDog(this.state.dog).then(response => {
+      this.props.history.push(`/dogs/${response.id}`);
     });
   };
 
   render() {
     return (
       <>
-        <h1>Add cat</h1>
-        <CatForm
-          cat={this.state.cat}
+        <h1>Add dog</h1>
+        <DogForm
+          dog={this.state.dog}
           onChangeName={this.handleNameChange}
           onChangeDescription={this.handleDescriptionChange}
           onSubmit={this.handleSubmit}
@@ -46,4 +46,4 @@ class CatCreate extends Component {
   }
 }
 
-export default CatCreate;
+export default DogCreate;

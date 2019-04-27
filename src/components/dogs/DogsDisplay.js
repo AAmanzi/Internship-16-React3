@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { fetchCats } from "./../../utils";
-import CatsList from "./CatsList";
+import { fetchDogs } from "./../../utils";
+import DogsList from "./DogsList";
 
-class CatsDisplay extends Component {
+class DogsDisplay extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cats: null
+      dogs: null
     };
   }
 
   componentDidMount() {
-    fetchCats().then(response => {
-      this.setState({ cats: response });
+    fetchDogs().then(response => {
+      this.setState({ dogs: response });
     });
   }
 
@@ -21,15 +21,15 @@ class CatsDisplay extends Component {
     return (
       <div>
         <div>
-          <h1>Cats</h1>
-          <Link to="/cats/create">
+          <h1>Dogs</h1>
+          <Link to="/dogs/create">
             <button>Add new</button>
           </Link>
         </div>
-        <CatsList cats={this.state.cats} />
+        <DogsList dogs={this.state.dogs} />
       </div>
     );
   }
 }
 
-export default CatsDisplay;
+export default DogsDisplay;
