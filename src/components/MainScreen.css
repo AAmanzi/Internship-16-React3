@@ -1,46 +1,106 @@
-*{
-  font-family: 'Impact';
+* {
+  font-family: "Impact";
   letter-spacing: 1px;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-body{
+body {
   background-color: #f8f8f4;
+  overflow: hidden;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-.MainScreenWrapper{
+.MainScreenWrapper {
   width: 100%;
   height: 100vh;
   display: flex;
 }
 
-.MainScreenCats{
+.MainScreenCats {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.MainScreenDogs{
+.MainScreenDogs {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-button{
+button {
   font-weight: bold;
   font-size: 22px;
   background-color: transparent;
   padding: 30px 70px;
   border: 4px solid black;
   transition: 0.2s all;
+}
+
+button:hover {
+  border-color: #b26518;
+  color: #b26518;
+}
+
+button:focus {
+  outline: none;
+}
+
+.PanelLeft {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  background-color: #844200;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: -50%;
+  transition: 0.3s all ease-in-out;
+  background-image: linear-gradient(
+    to bottom,
+    #4e2700,
+    #5f3002,
+    #703803,
+    #824102,
+    #944a00
+  );
+}
+
+.PanelLeftActive {
+  left: 0;
+  opacity: 1;
+}
+
+.PanelRight {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  background-color: #844200;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  right: -50%;
+  transition: 0.3s all ease-in-out;
+  background-image: linear-gradient(
+    to bottom,
+    #4e2700,
+    #5f3002,
+    #703803,
+    #824102,
+    #944a00
+  );
+}
+
+.PanelRightActive {
+  right: 0;
+  opacity: 1;
 }
