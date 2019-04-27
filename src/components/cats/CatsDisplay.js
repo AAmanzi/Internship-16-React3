@@ -20,11 +20,27 @@ class CatsDisplay extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Cats</h1>
-          <Link to="/cats/create">
-            <button>Add new</button>
-          </Link>
+        <div className="Header">
+          <div className="HeaderContent">
+            <h1>CATS</h1>
+            <Link to="/cats/create">
+              <button className="ButtonAlt">Add cat</button>
+            </Link>
+          </div>
+          <nav>
+            <ul>
+              <Link to="/">
+                <li className="NavItem">HOME</li>
+              </Link>
+              <Link to="/cats">
+                <li className="NavItem">CATS</li>
+                <div className="BulletPoint">&#8226;</div>
+              </Link>
+              <Link to="/dogs">
+                <li className="NavItem">DOGS</li>
+              </Link>
+            </ul>
+          </nav>
         </div>
         <CatsList cats={this.state.cats} />
       </div>

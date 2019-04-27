@@ -1,0 +1,48 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to right,
+    #4e2700,
+    #5f3002,
+    #703803,
+    #824102,
+    #944a00
+  );
+  color: #f8f8f4;
+  padding-bottom: 50px;
+}
+
+nav {
+  display: flex;
+  transform: rotate(270deg);
+}
+
+nav ul {
+  margin-top: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.NavItem {
+  text-underline-position: below;
+  text-decoration: underline;
+  font-size: 30px;
+  color: #f8f8f4;
+  display: flex;
+}
+
+.HeaderContent {
+  margin: 0 100px;
+}
+
+.BulletPoint{
+  font-size: 30px;
+  color: #f8f8f4;
+  text-decoration: none;
+  margin-right: -20px;
+  margin-left: 10px;
+}
+
+a{display: flex}

@@ -20,11 +20,27 @@ class DogsDisplay extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Dogs</h1>
-          <Link to="/dogs/create">
-            <button>Add new</button>
-          </Link>
+        <div className="Header">
+          <div className="HeaderContent">
+            <h1>DOGS</h1>
+            <Link to="/cats/create">
+              <button className="ButtonAlt">Add dog</button>
+            </Link>
+          </div>
+          <nav>
+            <ul>
+              <Link to="/">
+                <li className="NavItem">HOME</li>
+              </Link>
+              <Link to="/cats">
+                <li className="NavItem">CATS</li>
+              </Link>
+              <Link to="/dogs">
+                <li className="NavItem">DOGS</li>
+                <div className="BulletPoint">&#8226;</div>
+              </Link>
+            </ul>
+          </nav>
         </div>
         <DogsList dogs={this.state.dogs} />
       </div>
