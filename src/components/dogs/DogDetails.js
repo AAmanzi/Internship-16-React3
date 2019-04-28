@@ -27,12 +27,38 @@ class DogDetails extends Component {
     if (!this.state.dog) return null;
     return (
       <>
-        <h2>{this.state.dog.name}</h2>
-        <p>{this.state.dog.description}</p>
-        <Link to={`/dogs/update/${this.state.dog.id}`}>
-          <button>Edit</button>
-        </Link>
-        <button onClick={this.handleDelete}>Delete</button>
+        <div className="Header">
+          <div className="HeaderContent">
+            <h1>DOG INFO</h1>
+            <button className="ButtonAlt" onClick={this.handleDelete}>
+              Delete
+            </button>
+          </div>
+          <nav>
+            <ul>
+              <li className="NavItem">
+                <Link to="/">HOME</Link>
+              </li>
+              <li className="NavItem">
+                <Link to="/cats">CATS</Link>
+              </li>
+              <li className="NavItem">
+                <Link to="/dogs">DOGS</Link>
+                <div className="BulletPoint">&#8226;</div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="AnimalInfo">
+          <h2>{this.state.dog.name}</h2>
+          <p>{this.state.dog.description}</p>
+        </div>
+        <div className="Options">
+          <p>Fancy changing some details?</p>
+          <Link to={`/dogs/update/${this.state.dog.id}`}>
+            <button className="ButtonEdit">Edit dog</button>
+          </Link>
+        </div>
       </>
     );
   }

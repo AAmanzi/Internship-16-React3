@@ -29,16 +29,16 @@ class DogsDisplay extends Component {
           </div>
           <nav>
             <ul>
-              <Link to="/">
-                <li className="NavItem">HOME</li>
-              </Link>
-              <Link to="/cats">
-                <li className="NavItem">CATS</li>
-              </Link>
-              <Link to="/dogs">
-                <li className="NavItem">DOGS</li>
+              <li className="NavItem">
+                <Link to="/">HOME</Link>
+              </li>
+              <li className="NavItem">
+                <Link to="/cats">CATS</Link>
+              </li>
+              <li className="NavItem">
+                <Link to="/dogs">DOGS</Link>
                 <div className="BulletPoint">&#8226;</div>
-              </Link>
+              </li>
             </ul>
           </nav>
         </div>

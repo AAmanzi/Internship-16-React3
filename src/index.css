@@ -36,3 +36,55 @@ ul {
 ::selection{
   background-color: #e2af22;
 }
+
+h2{
+  font-size: 36px;
+}
+
+p{
+  font-size: 22px;
+  color: #808080;
+}
+
+input{
+  width: 55%;
+  margin: auto;
+  font-size: 36px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 22px;
+  font-weight: bold;
+}
+
+textarea{
+  color: #808080;
+  font-size: 22px;
+  width: 80%;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  resize: none;
+  text-align: center;
+}
+
+button:hover {
+  border-color: #b26518;
+  color: #b26518;
+  box-shadow: 10px 10px 24px -2px rgba(0,0,0,0.59);
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+button {
+  font-weight: bold;
+  font-size: 22px;
+  background-color: transparent;
+  padding: 30px 70px;
+  border: 4px solid black;
+  transition: 0.2s all;
+}

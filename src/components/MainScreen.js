@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./MainScreen.css";
-import "./Header.css";
-import "./AnimalsList.css";
+import "./styles/MainScreen.css";
+import "./styles/Header.css";
+import "./styles/Common.css"
+import "./styles/AnimalsList.css";
+import "./styles/AnimalDetails.css";
+import "./styles/AnimalForm.css";
 
 class MainScreen extends Component {
   constructor(props) {

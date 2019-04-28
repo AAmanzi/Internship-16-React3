@@ -18,33 +18,6 @@
   align-items: center;
 }
 
-button {
-  font-weight: bold;
-  font-size: 22px;
-  background-color: transparent;
-  padding: 30px 70px;
-  border: 4px solid black;
-  transition: 0.2s all;
-}
-
-.ButtonAlt{
-  border-color: #b26518;
-  color: #b26518;
-  padding: 20px 60px;
-  box-shadow: 10px 10px 24px -2px rgba(0,0,0,0.59);
-  cursor: pointer;
-}
-
-button:hover {
-  border-color: #b26518;
-  color: #b26518;
-  box-shadow: 10px 10px 24px -2px rgba(0,0,0,0.59);
-}
-
-button:focus {
-  outline: none;
-}
-
 .PanelLeft {
   position: absolute;
   width: 50%;

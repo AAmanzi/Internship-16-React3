@@ -27,12 +27,38 @@ class CatDetails extends Component {
     if (!this.state.cat) return null;
     return (
       <>
-        <h2>{this.state.cat.name}</h2>
-        <p>{this.state.cat.description}</p>
-        <Link to={`/cats/update/${this.state.cat.id}`}>
-          <button>Edit</button>
-        </Link>
-        <button onClick={this.handleDelete}>Delete</button>
+        <div className="Header">
+          <div className="HeaderContent">
+            <h1>CAT INFO</h1>
+            <button className="ButtonAlt" onClick={this.handleDelete}>
+              Delete
+            </button>
+          </div>
+          <nav>
+            <ul>
+              <li className="NavItem">
+                <Link to="/">HOME</Link>
+              </li>
+              <li className="NavItem">
+                <Link to="/cats">CATS</Link>
+                <div className="BulletPoint">&#8226;</div>
+              </li>
+              <li className="NavItem">
+                <Link to="/dogs">DOGS</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="AnimalInfo">
+          <h2>{this.state.cat.name}</h2>
+          <p>{this.state.cat.description}</p>
+        </div>
+        <div className="Options">
+          <p>Fancy changing some details?</p>
+          <Link to={`/cats/update/${this.state.cat.id}`}>
+            <button className="ButtonEdit">Edit cat</button>
+          </Link>
+        </div>
       </>
     );
   }

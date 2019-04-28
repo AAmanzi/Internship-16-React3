@@ -1,0 +1,43 @@
+.Options {
+  background-color: white;
+  width: 30%;
+  height: 100px;
+  padding-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.Options p {
+  max-width: 160px;
+  margin: auto;
+  color: black;
+  text-align: center;
+}
+
+.ButtonEdit {
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  padding: 20px 40px;
+  margin-right: 10px;
+}
+
+.ButtonEdit:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+  box-shadow: none;
+}
+
+.ButtonAlt {
+  border-color: #b26518;
+  color: #b26518;
+  padding: 20px 60px;
+  cursor: pointer;
+}
+
+.ButtonAlt:hover {
+  box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.59);
+  margin-left: -5px;
+}

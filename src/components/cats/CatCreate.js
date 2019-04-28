@@ -26,15 +26,29 @@ class CatCreate extends Component {
   };
 
   handleSubmit = () => {
+    if (this.state.cat.name.trim() === "") {
+      return;
+    }
     createCat(this.state.cat).then(response => {
       this.props.history.push(`/cats/${response.id}`);
     });
   };
 
+  handleCancel = () => {
+    this.props.history.push("/cats");
+  };
+
   render() {
     return (
       <>
-        <h1>Add cat</h1>
+        <div className="Header">
+          <div className="HeaderContent">
+            <h1>ADD CAT</h1>
+            <button className="ButtonAlt" onClick={this.handleCancel}>
+              Cancel
+            </button>
+          </div>
+        </div>
         <CatForm
           cat={this.state.cat}
           onChangeName={this.handleNameChange}

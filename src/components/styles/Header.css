@@ -19,15 +19,13 @@ nav {
 }
 
 nav ul {
-  margin-top: 0;
+  margin: 0;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
 }
 
 .NavItem {
-  text-underline-position: below;
-  text-decoration: underline;
   font-size: 30px;
   color: #f8f8f4;
   display: flex;
@@ -45,4 +43,8 @@ nav ul {
   margin-left: 10px;
 }
 
-a{display: flex}
+.NavItem a{
+  color: white;
+  display: flex;
+  text-decoration: underline;
+}

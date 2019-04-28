@@ -1,31 +1,36 @@
 {
   "cats": [
     {
-      "name": "BUMBULO",
-      "description": "ATATURK",
+      "name": "Bumbulo",
+      "description": "Atatürk",
       "id": 6
     },
     {
-      "name": "",
-      "description": "",
+      "name": "Boris",
+      "description": "Really thoughtful description",
       "id": 7
     }
   ],
   "dogs": [
     {
-      "name": "bigboi",
+      "name": "Big boi",
       "description": "some description 2",
       "id": 2
     },
     {
       "id": 3,
-      "name": "gud boi",
+      "name": "Gud boi",
       "description": "some description 3"
     },
     {
-      "name": "bad boi",
+      "name": "Bad boi",
       "description": "kek",
       "id": 4
+    },
+    {
+      "name": "Señor Rozo",
+      "description": "Not sure if dog or unicorn",
+      "id": 5
     }
   ]
 }

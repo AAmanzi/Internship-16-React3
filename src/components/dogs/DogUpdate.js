@@ -36,15 +36,29 @@ class DogUpdate extends Component {
   };
 
   handleSubmit = () => {
+    if(this.state.dog.name.trim() === ""){
+      return;
+    }
     updateDog(this.state.dog).then(response => {
       this.props.history.push(`/dogs/${response.id}`);
     });
   };
 
+  handleCancel = () => {
+    this.props.history.push("/dogs");
+  };
+
   render() {
     return (
       <>
-        <h1>Edit dog</h1>
+        <div className="Header">
+          <div className="HeaderContent">
+            <h1>EDIT DOG</h1>
+            <button className="ButtonAlt" onClick={this.handleCancel}>
+              Cancel
+            </button>
+          </div>
+        </div>
         <DogForm
           dog={this.state.dog}
           onChangeName={this.handleNameChange}
