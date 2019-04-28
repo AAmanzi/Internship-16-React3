@@ -23,7 +23,7 @@ class DogsDisplay extends Component {
         <div className="Header">
           <div className="HeaderContent">
             <h1>DOGS</h1>
-            <Link to="/cats/create">
+            <Link to="/dogs/create">
               <button className="ButtonAlt">Add dog</button>
             </Link>
           </div>
