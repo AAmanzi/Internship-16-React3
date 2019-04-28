@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MainScreen.css";
 import "./Header.css";
+import "./AnimalsList.css";
 
 class MainScreen extends Component {
   constructor(props) {

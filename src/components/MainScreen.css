@@ -30,11 +30,15 @@ button {
 .ButtonAlt{
   border-color: #b26518;
   color: #b26518;
+  padding: 20px 60px;
+  box-shadow: 10px 10px 24px -2px rgba(0,0,0,0.59);
+  cursor: pointer;
 }
 
 button:hover {
   border-color: #b26518;
   color: #b26518;
+  box-shadow: 10px 10px 24px -2px rgba(0,0,0,0.59);
 }
 
 button:focus {
@@ -62,8 +66,8 @@ button:focus {
 }
 
 .PanelLeftActive {
-  left: 0;
-  opacity: 1;
+  left: 0 !important;
+  opacity: 1 !important;
 }
 
 .PanelRight {
@@ -87,6 +91,6 @@ button:focus {
 }
 
 .PanelRightActive {
-  right: 0;
-  opacity: 1;
+  right: 0 !important;
+  opacity: 1 !important;
 }
